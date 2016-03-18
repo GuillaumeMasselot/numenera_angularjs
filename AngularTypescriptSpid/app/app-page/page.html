@@ -1,0 +1,30 @@
+﻿<div class="jumbotron text-center">
+    <h1>The Page</h1>
+    <p>This page shows <span class="text-danger">Material Design</span> and <span class="text-danger">Typescript designed</span> directives</p>
+</div>
+
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Fibonacci</span>
+                </md-card-title-text>
+            </md-card-title>
+
+             <md-card-content style="padding-top:30px">
+                <span ng-repeat="fibo in pagectrl.someArray">
+                    {{fibo}}
+                </span>
+            </md-card-content>
+
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-warn" ng-click="pagectrl.fiboNext()">Add next Fibonacci number</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <some base="3"></some>
+        <some base="7"></some>
+    </div>
+</md-content>
