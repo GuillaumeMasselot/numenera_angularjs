@@ -24,7 +24,7 @@ module App {
             requireBase: false
         });
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/');
 
         //angular-ui-router for multiple views
         $stateProvider
