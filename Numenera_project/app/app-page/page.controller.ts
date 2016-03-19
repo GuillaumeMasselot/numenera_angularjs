@@ -12,13 +12,13 @@ module App {
         title: string = "Page";
         someArray: Array<number>;
 
-        static $inject: string[] = ["PageService"];
-        constructor(private PageService: IPageService) {
+        static $inject: string[] = ["pageService"];
+        constructor(private pageService: IPageService) {
             this.activate();
         }
 
-        activate():void {
-            this.someArray = this.PageService.getData();
+        activate(): void {
+            this.someArray = this.pageService.getData();
         }
 
         fiboNext(): void {
@@ -36,5 +36,5 @@ module App {
         }
     }
 
-    angular.module("BlankApp").controller("PageController", PageController);
+    angular.module("Numenera").controller("pageController", PageController);
 }

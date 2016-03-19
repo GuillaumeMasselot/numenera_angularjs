@@ -1,6 +1,6 @@
 // Create the module and define its dependencies.
 module App {
-    angular.module("BlankApp", [
+    angular.module("Numenera", [
         // Angular modules 
         "ngMaterial",
         "ui.router"

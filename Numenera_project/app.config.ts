@@ -5,18 +5,22 @@ module App {
     'use scripts';
 
     angular
-        .module('BlankApp')
+        .module('Numenera')
         .config(config);
 
     config.$inject = [
         '$locationProvider',
         '$stateProvider',
-        '$urlRouterProvider'
+        '$urlRouterProvider',
+        '$mdIconProvider'
     ];
 
     function config($locationProvider: ng.ILocationProvider,
         $stateProvider: angular.ui.IStateProvider,
-        $urlRouterProvider: angular.ui.IUrlRouterProvider) {
+        $urlRouterProvider: angular.ui.IUrlRouterProvider,
+        $mdIconProvider) {
+
+        $mdIconProvider.defaultIconSet("img/mdi.svg");
 
         //html5 removes the need for # in URL
         $locationProvider.html5Mode({
@@ -32,7 +36,7 @@ module App {
                 url: '/',
                 templateUrl: 'app/home/home.html'
             })
-            .state('app-page', <ng.ui.IState>{
+            .state('page', <ng.ui.IState>{
                 url: '/page',
                 templateUrl: 'app/app-page/page.html',
                 controller: PageController,

@@ -5,7 +5,7 @@ module App {
     export interface IPageService {
         getData: () => Array<number>;
     }
-    
+
     export class PageService implements IPageService {
 
         static $inject: string[] = ["$http"];
@@ -17,5 +17,5 @@ module App {
         }
     }
 
-    angular.module("BlankApp").service("PageService", PageService);
+    angular.module("Numenera").service("pageService", PageService);
 }

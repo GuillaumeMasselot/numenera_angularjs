@@ -19,5 +19,5 @@ module App {
         }
     }
 
-    angular.module("BlankApp").controller("ColumnTwoController", ColumnTwoController);
+    angular.module("Numenera").controller("ColumnTwoController", ColumnTwoController);
 }
