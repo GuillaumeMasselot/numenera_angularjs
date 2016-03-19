@@ -1,0 +1,76 @@
+﻿<div layout="column">
+
+    <md-subheader id="path">
+        <md-button>INITIALISATION</md-button>
+        <span>/</span>
+        <md-button>PERSONNALISATION</md-button>
+    </md-subheader>
+    <md-divider></md-divider>
+
+    <div layout="row">
+        <div id="herocontent" layout="column" layout-align="center center" flex="50" flex-offset="25">
+            <md-whiteframe class="md-whiteframe-2dp" style="width:100%">
+                <div id="herodata" layout="row" layout-align="center center">
+                    <span>Je suis un </span>
+                    <md-input-container>
+                        <label style="color:indianred">Nom</label>
+                        <md-select ng-model="genCtrl.currentHero.noun">
+                            <md-option ng-repeat="noun in genCtrl.heroesData.nouns" value="{{noun.label}}">
+                                {{noun.label}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <span> </span>
+                    <md-input-container>
+                        <label style="color:darkseagreen">Adjectif</label>
+                        <md-select ng-model="genCtrl.currentHero.adjective">
+                            <md-option ng-repeat="adj in genCtrl.heroesData.adjectives" value="{{adj.label}}">
+                                {{adj.label}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <span> qui </span>
+                    <md-input-container>
+                        <label style="color:cornflowerblue">Verbe</label>
+                        <md-select ng-model="genCtrl.currentHero.verb">
+                            <md-option ng-repeat="verb in genCtrl.heroesData.verbs" value="{{verb.label}}">
+                                {{verb.label}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </md-whiteframe>
+        </div>
+    </div>
+
+    <div ng-cloak style="margin-top:25px">
+        <md-divider></md-divider>
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Description">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">Tab One</h1>
+                        <p>{{genCtrl.currentHero.noun}}</p>
+                </md-tab>
+                <md-tab label="Statistiques">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">Tab Two</h1>
+                        <p>Stats</p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Possessions">
+                    <md-content class="md-padding">
+                        <p>Possessions</p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Pouvoirs">
+                    <md-content class="md-padding">
+                        <p>Pouvoirs</p>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+    </div>
+</div>

@@ -42,31 +42,20 @@ module App {
                 controller: PageController,
                 controllerAs: 'pagectrl'
             })
-            .state('gen', <ng.ui.IState>{
+            .state('crea', <ng.ui.IState>{
                 url: '/character_creation',
-                templateUrl: 'app/generator/character-creation.html',
+                template: '<ui-view></ui-view>',
                 controller: Generator.CharacterCreationController,
                 controllerAs: 'genCtrl'
+            })
+            .state('crea.init', <ng.ui.IState>{
+                url: '/character_creation/init',
+                templateUrl: 'app/generator/character-creation-init.html',
+            })
+            .state('crea.fill', <ng.ui.IState>{
+                url: '/character_creation/fill',
+                templateUrl: 'app/generator/character-creation-fill.html',
             });
-            //.state('views', <ng.ui.IState>{
-            //    url: '/views',
-            //    views: {
-
-            //        // the main template will be placed here (relatively named)
-            //        '': { templateUrl: 'app/app-other-page/page-with-views.html' },
-
-            //        // the child views will be defined here (absolutely named)
-            //        'columnOne@views': { template: 'Look I am a column!' },
-
-            //        // for column two, we'll define a separate controller 
-            //        'columnTwo@views': {
-            //            templateUrl: 'app/app-other-page/column-two.html',
-            //            controller: Cha,
-            //            controllerAs: 'coltwoctrl'
-            //        }
-            //    }
-            //});
-            //more states here.
     }
 }
 

@@ -12,7 +12,7 @@
     },
     {
       "label": "Générateur",
-      "state": "gen",
+      "state": "crea.init",
       "icon": "account-plus"
     }
   ]
