@@ -1,0 +1,41 @@
+﻿{
+  "nouns": [
+    {
+      "label": "Glaive"
+    },
+    {
+      "label": "Jack"
+    },
+    {
+      "label": "Nano"
+    }
+  ],
+  "adjectives": [
+    {
+      "label": "Astucieux"
+    },
+    {
+      "label": "Charmant"
+    },
+    {
+      "label": "Volontaire"
+    },
+    {
+      "label": "Mécanique"
+    }
+  ],
+  "verbs": [
+    {
+      "label": "Chevauche la foudre"
+    },
+    {
+      "label": "Contrôle la gravité"
+    },
+    {
+      "label": "Utilise le magnétisme"
+    },
+    {
+      "label": "Parle aux machines"
+    }
+  ]
+}

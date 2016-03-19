@@ -3,7 +3,7 @@
     <p>This page shows <span class="text-danger">Material Design</span> and <span class="text-danger">Typescript designed</span> directives</p>
 </div>
 
-<md-content class="md-padding" layout-xs="column" layout="row">
+<md-content layout-xs="column" layout="row">
     <div flex-xs flex-gt-xs="50" layout="column">
         <md-card>
             <md-card-title>
@@ -12,7 +12,7 @@
                 </md-card-title-text>
             </md-card-title>
 
-             <md-card-content style="padding-top:30px">
+             <md-card-content>
                 <span ng-repeat="fibo in pagectrl.someArray">
                     {{fibo}}
                 </span>

@@ -13,21 +13,10 @@
 <body ng-app="Numenera" ng-cloak>
     <div layout="row" ng-controller="HomeController as homeCtrl">
         <side-menu nav-modules="homeCtrl.modules"></side-menu>
-        <div flex>
-            <md-content>
-                <md-toolbar style="background-color:#20252A">
-                    <div class="md-toolbar-tools">
-                        <md-button aria-label="Page">Numenera NDF CREW</md-button>
-                    </div>
-                </md-toolbar>
-            </md-content>
+        <div flex> <!--style="background-color:rgba(255,255,255,.5) !important;"-->
+            <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
 
-            <div class="container" ng-cloak>
-
-                <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
-                <div ui-view style="padding:30px"></div>
-
-            </div>
+                <div ui-view></div>
         </div>
     </div>
     
@@ -51,11 +40,12 @@
     <!-- Your application controllers -->
     <script src="app/home/home.controller.js"></script>
     <script src="app/app-page/page.controller.js"></script>
-    <script src="app/app-other-page/columnTwo.controller.js"></script>
+    <script src="app/generator/character-creation.controller.js"></script>
 
     <!-- You application services -->
     <script src="app/home/core.service.js"></script>
     <script src="app/app-page/page.service.js"></script>
+    <script src="app/generator/generator.service.js"></script>
 
     <!-- Your application directives -->
     <script src="app/shared/components/side-menu.directive.js"></script>

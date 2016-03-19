@@ -2,12 +2,12 @@
 module App {
     "use strict";
 
-    export interface MyDatabase {
+    export interface DbModules {
         modules: Array<Shared.NavModule>;
     }
 
     export interface ICoreService {
-        getModules: () => ng.IPromise<MyDatabase>;
+        getModules: () => ng.IPromise<DbModules>;
     }
     
     export class CoreService implements ICoreService {
@@ -16,9 +16,9 @@ module App {
         constructor(private $q: ng.IQService, private $http: ng.IHttpService) {
         }
 
-        getModules(): ng.IPromise<MyDatabase> {
+        getModules(): ng.IPromise<DbModules> {
             var deferredData = this.$q.defer();
-            return this.$http.get("http://localhost:36659/db/db.json").success(function (data: MyDatabase) {
+            return this.$http.get("http://localhost:36659/db/modules.json").success(function (data: DbModules) {
                 deferredData.resolve(data);
             }).error(function (err) {
                 deferredData.reject(err);

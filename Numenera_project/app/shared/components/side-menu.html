@@ -1,11 +1,16 @@
-﻿<div id="navigation" layout="column" layout-align="top center" style="background-color:#20252A;height:100%;width:250px">
-    <div id="nav-header" style="padding:20px">
+﻿<div id="navigation" layout="column" layout-align="top center">
+
+    <div id="nav-header" style="padding:19px">
         <a ui-sref="home"><img src="../../img/LogoWhite200.png" alt=""></a>
     </div>
-    <md-list ng-cloak>
-        <md-list-item ui-sref="{{mod.state}}" ng-repeat="mod in navModules">
+
+    <md-list ng-cloak flex>
+        <md-list-item ui-sref="{{mod.state}}" ng-click="select(mod)" ng-repeat="mod in navModules" md-no-ink ng-class="{selected: isSelected(mod)}">
+
             <md-icon style="color:grey" md-svg-icon="{{mod.icon}}"></md-icon>
             <p style="text-transform:uppercase;color:grey"> {{ mod.label }} </p>
+
         </md-list-item>
     </md-list>
+
 </div>
