@@ -8,40 +8,8 @@
     <md-divider></md-divider>
 
     <div layout="row">
-        <div id="herocontent" layout="column" layout-align="center center" flex="50" flex-offset="25">
-            <md-whiteframe class="md-whiteframe-2dp" style="width:100%">
-                <div id="herodata" layout="row" layout-align="center center">
-                    <span>Je suis un </span>
-                    <md-input-container>
-                        <label style="color:indianred">Nom</label>
-                        <md-select ng-model="genCtrl.currentHero.noun">
-                            <md-option ng-repeat="noun in genCtrl.heroesData.nouns" value="{{noun.label}}">
-                                {{noun.label}}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-
-                    <span> </span>
-                    <md-input-container>
-                        <label style="color:darkseagreen">Adjectif</label>
-                        <md-select ng-model="genCtrl.currentHero.adjective">
-                            <md-option ng-repeat="adj in genCtrl.heroesData.adjectives" value="{{adj.label}}">
-                                {{adj.label}}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-
-                    <span> qui </span>
-                    <md-input-container>
-                        <label style="color:cornflowerblue">Verbe</label>
-                        <md-select ng-model="genCtrl.currentHero.verb">
-                            <md-option ng-repeat="verb in genCtrl.heroesData.verbs" value="{{verb.label}}">
-                                {{verb.label}}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-                </div>
-            </md-whiteframe>
+        <div id="herocontent" flex="50" flex-offset="25">
+            <character-init hero="genCtrl.currentHero" heroes-data="genCtrl.heroesData" style="width:100%"></character-init>
         </div>
     </div>
 

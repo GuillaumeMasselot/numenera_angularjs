@@ -32,6 +32,10 @@ module App.Generator {
                 console.log(vm.heroesData);
             });
         }
+
+        isDisabled(): boolean {
+            return this.currentHero.noun == undefined || this.currentHero.adjective == undefined || this.currentHero.verb == undefined;
+        }
     }
 
     angular.module("Numenera").controller("CharacterCreationController", CharacterCreationController);

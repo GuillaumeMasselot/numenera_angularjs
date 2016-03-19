@@ -58,12 +58,15 @@ md-list {
 }
 
 #herodata md-input-container {
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 #startbutton {
     margin-top:50px;
-    background-color:#F44336;
-    color:white;
     padding:0 20px 0 20px;
+}
+
+.startbutton-enabled {
+    background-color:#F44336 !important;
+    color:white !important;
 }

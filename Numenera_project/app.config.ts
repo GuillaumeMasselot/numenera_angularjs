@@ -49,11 +49,11 @@ module App {
                 controllerAs: 'genCtrl'
             })
             .state('crea.init', <ng.ui.IState>{
-                url: '/character_creation/init',
+                url: '/init',
                 templateUrl: 'app/generator/character-creation-init.html',
             })
             .state('crea.fill', <ng.ui.IState>{
-                url: '/character_creation/fill',
+                url: '/fill',
                 templateUrl: 'app/generator/character-creation-fill.html',
             });
     }
