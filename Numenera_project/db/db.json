@@ -1,0 +1,19 @@
+﻿{
+  "modules": [
+    {
+      "label": "Accueil",
+      "state": ".home",
+      "icon": "home"
+    },
+    {
+      "label": "Articles",
+      "state": ".page",
+      "icon": "library-books"
+    },
+    {
+      "label": "Générateur",
+      "state": ".views",
+      "icon": "account-plus"
+    }
+  ]
+}
