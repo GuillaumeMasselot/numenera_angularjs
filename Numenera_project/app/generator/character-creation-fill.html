@@ -1,44 +1,61 @@
 ﻿<div layout="column">
 
-    <md-subheader id="path">
+    <md-subheader id="path" style="color:#EF5350">
         <md-button>INITIALISATION</md-button>
         <span>/</span>
         <md-button>PERSONNALISATION</md-button>
     </md-subheader>
     <md-divider></md-divider>
 
-    <div layout="row">
-        <div id="herocontent" flex="50" flex-offset="25">
-            <character-init hero="genCtrl.currentHero" heroes-data="genCtrl.heroesData" style="width:100%"></character-init>
+    <div layout="row" layout-align="center center" style="margin:30px">
+        <div id="herocontent" flex="66" layout="column">
+            <md-whiteframe class="md-whiteframe-2dp" style="width:100%">
+                <md-subheader id="header">Présentation</md-subheader>
+                <character-init hero="genCtrl.currentHero" heroes-data="genCtrl.heroesData"></character-init>
+            </md-whiteframe>
         </div>
     </div>
 
-    <div ng-cloak style="margin-top:25px">
-        <md-divider></md-divider>
-        <md-content>
-            <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="Description">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-2">Tab One</h1>
-                        <p>{{genCtrl.currentHero.noun}}</p>
-                </md-tab>
-                <md-tab label="Statistiques">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-2">Tab Two</h1>
-                        <p>Stats</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="Possessions">
-                    <md-content class="md-padding">
-                        <p>Possessions</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="Pouvoirs">
-                    <md-content class="md-padding">
-                        <p>Pouvoirs</p>
-                    </md-content>
-                </md-tab>
-            </md-tabs>
-        </md-content>
+    <div ng-cloak layout="row" layout-align="center center"  style="margin:30px">
+        <md-whiteframe class="md-whiteframe-2dp" flex="66">
+            <md-subheader id="header">Spécialisation</md-subheader>
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Description">
+                        <md-content class="md-padding">
+                            <!--<h3 class="md-display-1">Description du personnage</h3>-->
+                            <md-input-container>
+                                <label>Nom</label>
+                                <input ng-model="genCtrl.currentHero.name">
+                            </md-input-container>
+                            <md-input-container class="md-block">
+                                <label>Biographie</label>
+                                <textarea ng-model="genCtrl.currentHero.biography" rows="5" md-select-on-focus style="height: 5em;"></textarea>
+                            </md-input-container>
+                            <md-input-container class="md-block">
+                                <label>Notes</label>
+                                <textarea ng-model="genCtrl.currentHero.notes" md-maxlength="150" rows="5" md-select-on-focus style="height: 5em;"></textarea>
+                            </md-input-container>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Statistiques">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Two</h1>
+                            <p>Stats</p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Possessions">
+                        <md-content class="md-padding">
+                            <p>Possessions</p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Pouvoirs">
+                        <md-content class="md-padding">
+                            <p>Pouvoirs</p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+        </md-whiteframe>
     </div>
 </div>

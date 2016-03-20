@@ -1,34 +1,32 @@
-﻿<md-whiteframe class="md-whiteframe-2dp">
-    <md-subheader id="header">Personnage</md-subheader>
-    <div id="herodata" layout="row" layout-align="center center">
-        <span>Je suis un </span>
-        <md-input-container>
-            <label style="color:indianred">Nom</label>
-            <md-select ng-model="hero.noun">
-                <md-option ng-repeat="noun in heroesData.nouns" value="{{noun.label}}">
-                    {{noun.label}}
-                </md-option>
-            </md-select>
-        </md-input-container>
+﻿
+<div id="herodata" layout="row" layout-align="center center">
+    <span>Je suis un </span>
+    <md-input-container>
+        <label style="color:indianred">Nom</label>
+        <md-select ng-model="hero.noun">
+            <md-option ng-repeat="noun in heroesData.nouns" value="{{noun.label}}">
+                {{noun.label}}
+            </md-option>
+        </md-select>
+    </md-input-container>
 
-        <span> </span>
-        <md-input-container>
-            <label style="color:darkseagreen">Adjectif</label>
-            <md-select ng-model="hero.adjective">
-                <md-option ng-repeat="adj in heroesData.adjectives" value="{{adj.label}}">
-                    {{adj.label}}
-                </md-option>
-            </md-select>
-        </md-input-container>
+    <span> </span>
+    <md-input-container>
+        <label style="color:darkseagreen">Adjectif</label>
+        <md-select ng-model="hero.adjective">
+            <md-option ng-repeat="adj in heroesData.adjectives" value="{{adj.label}}">
+                {{adj.label}}
+            </md-option>
+        </md-select>
+    </md-input-container>
 
-        <span> qui </span>
-        <md-input-container>
-            <label style="color:cornflowerblue">Verbe</label>
-            <md-select ng-model="hero.verb">
-                <md-option ng-repeat="verb in heroesData.verbs" value="{{verb.label}}">
-                    {{verb.label}}
-                </md-option>
-            </md-select>
-        </md-input-container>
-    </div>
-</md-whiteframe>
+    <span> qui </span>
+    <md-input-container>
+        <label style="color:cornflowerblue">Verbe</label>
+        <md-select ng-model="hero.verb">
+            <md-option ng-repeat="verb in heroesData.verbs" value="{{verb.label}}">
+                {{verb.label}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+</div>

@@ -29,18 +29,17 @@ md-list {
 }
 
 #herocontent{
-    margin-top:20px;
     font-size:18px;
 }
 
 #header {
     width:100%; 
-    background-color:#F44336;
+    background-color:#EF5350;/*rgb(63,81,181);*/ /*EF5350*/
     color:white;
     font-size: 15px;
     line-height: 32px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     font-family:Lato,sans-serif!important;
 }
 
@@ -67,6 +66,17 @@ md-list {
 }
 
 .startbutton-enabled {
-    background-color:#F44336 !important;
+    background-color:#EF5350 !important;
     color:white !important;
+}
+
+.banner {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }

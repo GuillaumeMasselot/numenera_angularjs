@@ -1,22 +1,25 @@
-﻿<div layout="column">
+﻿<div layout="column" layout-align="center center">
 
-    <md-subheader id="path">
-        <md-button>INITIALISATION</md-button>
-    </md-subheader>
+    <div style="background-image:url(img/Untitled.png)" class="banner"></div>
     <md-divider></md-divider>
 
-    <div class="jumbotron text-center" style="padding-bottom:0 !important;margin-bottom:0 !important">
+    <!--<div class="jumbotron text-center" style="padding-bottom:0 !important;margin-bottom:0 !important">
         <img src="../../img/Untitled.png" style="border:2px solid #20252A" />
         <h1>Création de personnage</h1>
         <p>Un <span class="text-danger">héros</span> du neuvième monde</p>
-    </div>
- 
-    <div layout="row">
+    </div>-->
+    <h1>Création de personnage</h1>
+    <p>Un <span class="text-danger">héros</span> du neuvième monde</p>
+
+    <div layout="row" style="width:100%;margin-top:30px;">
         <div id="herocontent" layout="column" layout-align="center center" flex="50" flex-offset="25">
-            <character-init hero="genCtrl.currentHero" heroes-data="genCtrl.heroesData" style="width:100%"></character-init>
+            <md-whiteframe class="md-whiteframe-2dp" style="width:100%">
+                <md-subheader id="header">Présentation</md-subheader>
+                <character-init hero="genCtrl.currentHero" heroes-data="genCtrl.heroesData"></character-init>
+            </md-whiteframe>
 
             <md-button ng-disabled="genCtrl.isDisabled()" ng-class="{'startbutton-enabled':!genCtrl.isDisabled(), 'md-raised':true}"
-                       style="margin-top:50px;padding:0 20px 0 20px;" ui-sref="crea.fill">Commencer</md-button>
+                        style="margin-top:50px;padding:0 20px 0 20px;" ui-sref="crea.fill">Commencer</md-button>
         </div>
     </div>
 </div>
